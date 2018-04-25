@@ -6,6 +6,7 @@ mongoose.plugin(schema => {schema.options.usePushEach = true});
 const noteSchema = new Schema({
 	task: {type: 'String', required: true},
 	id: {type: 'String', required: true, unique: true},
+	laneId: {type: 'String', required: true},
 });
 
 export default mongoose.model('Note', noteSchema);
